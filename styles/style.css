@@ -1,0 +1,385 @@
+/*---------------------------------------------------------------------------*\
+  
+  IMPORTANT: This website was built using Sass. Please look at main.scss
+  for styling documentation. 
+
+\*---------------------------------------------------------------------------*/
+/*------------------------------------*\
+  # FONTS & GLOBAL VARIABLES 
+\*------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Staatliches&display=swap");
+/*------------------------------------*\
+  # GLOBAL CLASSES 
+\*------------------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1f2123;
+  color: #e8e6e3;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: "Staatliches", sans-serif;
+  color: #e8e6e3;
+}
+
+/*------------------------------------*\
+  # UTILITY CLASSES 
+\*------------------------------------*/
+.cntr {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.main-page {
+  background-color: #1f2123;
+  min-height: calc(100vh - 85px);
+  border: 1px solid #1f2123;
+  /* Easy fix to obscure scroll problem */
+}
+
+.content {
+  margin: 20vh 10px 0 10px;
+}
+
+.img-container {
+  padding: 0 20px;
+  text-align: center;
+}
+.img-container img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.hide {
+  display: none;
+}
+
+/*------------------------------------*\
+  # NAVBAR 
+\*------------------------------------*/
+.navigation-bar {
+  font-family: "Staatliches", sans-serif;
+  height: 50px;
+  background-color: #30acff;
+}
+.navigation-bar * {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.navigation-bar ul {
+  list-style-type: none;
+  display: flex;
+}
+.navigation-bar a {
+  color: #1f2123;
+  margin: 0 10px;
+  font-size: 1.2em;
+}
+.navigation-bar .current-page {
+  color: #3b3f42;
+}
+.navigation-bar a:hover {
+  border-bottom: 1px #1f2123 solid;
+}
+.navigation-bar .flex {
+  justify-content: space-between;
+  align-items: flex-end !important;
+}
+.navigation-bar .logo {
+  display: flex;
+  align-items: flex-end;
+}
+.navigation-bar .logo img {
+  max-height: 40px;
+}
+
+/*------------------------------------*\
+  # FOOTER 
+\*------------------------------------*/
+footer {
+  background-color: #30acff;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 35px;
+}
+footer div {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+footer img {
+  width: 25px;
+  margin: 0 1em;
+}
+
+/*------------------------------------*\
+  # INDEX PAGE
+\*------------------------------------*/
+.title {
+  flex-direction: column;
+}
+.title h1 {
+  font-size: 7em;
+}
+.title h2 {
+  font-size: 2.5em;
+}
+
+/*------------------------------------*\
+  # PROFILE PAGE  
+\*------------------------------------*/
+.profile__info {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 0 !important;
+  padding-top: 0px;
+  padding-bottom: 15vh;
+}
+.profile__info p {
+  margin-bottom: 15px;
+  text-align: justify;
+  font-size: 1.25em;
+}
+.profile__info p a {
+  color: #e8e6e3;
+  border-bottom: 1px solid #f7df1e;
+}
+
+.img-background {
+  background-color: #30acff;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.img-background :after {
+  display: block;
+  padding-bottom: 100%;
+}
+
+.abilities {
+  width: 80%;
+  margin: 30px auto 10%;
+  padding-top: 20px;
+}
+.abilities div {
+  text-align: left;
+}
+.abilities .abilities-title {
+  border: 1px solid #1f2123;
+  text-align: center;
+  background-color: #30acff;
+  font-family: "Staatliches", sans-serif;
+  font-size: 1.2em;
+  color: #1f2123;
+}
+.abilities .abilities-title .mobile-br {
+  display: none;
+}
+.abilities .col-2,
+.abilities .col-4 {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 1px;
+}
+.abilities .col-2 img,
+.abilities .col-4 img {
+  padding: 2px 2px;
+  max-height: 32px;
+  max-width: 32px;
+  margin: 0 auto;
+}
+
+/*------------------------------------*\
+  # PROJECTS PAGE 
+\*------------------------------------*/
+.projects .cntr {
+  padding: 0 20px;
+  padding-top: 50px;
+}
+.projects .cntr .flex {
+  flex-direction: column;
+}
+.projects .cntr .flex .grid {
+  padding-bottom: 4em;
+}
+.projects h1 {
+  padding-top: 20px;
+  font-size: calc(3em + 1vw);
+}
+.projects h1 a {
+  color: #e8e6e3;
+}
+.projects h1 a:hover {
+  color: #f7df1e;
+}
+.projects h1:hover {
+  color: #f7df1e;
+}
+.projects img {
+  width: 100%;
+}
+.projects .carousel {
+  cursor: pointer;
+}
+.projects .pswp__top-bar {
+  font-family: "Staatliches", sans-serif;
+}
+.projects p {
+  text-align: justify;
+  padding-bottom: 3px;
+  font-size: 1em;
+}
+.projects p a {
+  color: #e8e6e3;
+  border-bottom: 1px solid #f7df1e;
+}
+
+/*------------------------------------*\
+  # CONTACTS PAGE 
+\*------------------------------------*/
+.contacts {
+  padding-top: 4em;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.contacts div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacts button {
+  background-color: #f7df1e;
+  color: #1f2123;
+  border-color: #f7df1e;
+  margin: 2em 30% 0 30%;
+  width: 40%;
+  font-family: "Staatliches", sans-serif;
+  font-size: 1.2em;
+}
+.contacts button:hover {
+  color: #e8e6e3;
+  border-color: #f7df1e;
+  background-color: #1f2123;
+}
+.contacts label {
+  font-family: "Staatliches", sans-serif;
+}
+
+/*------------------------------------*\
+  # MEDIA QUERIES 
+\*------------------------------------*/
+@media screen and (max-width: 1036px) {
+  .profile {
+    grid-template-columns: 1fr;
+    margin: 0 5vw;
+  }
+  .profile .profile__img {
+    margin: 5vw 5vw;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1036px) {
+  .title {
+    justify-content: center;
+    align-content: flex-start;
+  }
+  .title h2 {
+    display: block;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .projects .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects p {
+    font-size: calc(0.8em + 1vw);
+  }
+}
+@media screen and (min-width: 769px) {
+  .right-cell {
+    order: 1;
+  }
+
+  .profile__img {
+    padding: 0 20px 0 0;
+  }
+  .profile__img .img-cont {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title {
+    padding-bottom: 20vh;
+  }
+}
+@media screen and (max-width: 560px) {
+  .title {
+    text-align: center;
+  }
+  .title h1 {
+    font-size: 19vw;
+  }
+  .title h2 {
+    font-size: 10vw;
+  }
+}
+@media screen and (max-width: 576px) {
+  .navigation-bar {
+    font-size: 0.8em;
+  }
+
+  .profile__info {
+    font-size: 3.5vw;
+  }
+}
+@media screen and (max-width: 424px) {
+  #first-project-br {
+    display: inline;
+  }
+}
+@media screen and (max-height: 730px) {
+  footer {
+    margin-top: 35px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
