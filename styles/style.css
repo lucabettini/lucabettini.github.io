@@ -1,7 +1,38 @@
+/*------------------------------------*\
+  #INDEX 
+
+  1.  DOCUMENTATION
+  2.  FONTS & COLOR VARIABLES
+  3.  GLOBAL CLASSES
+  4.  UTILITY CLASSES
+  5.  NAVIGATION BAR
+  6.  FOOTER
+  7.  INDEX (MAIN) PAGE 
+  8.  PROFILE PAGE
+  9.  PROJECTS PAGE
+  10. CONTACTS PAGE 
+  11. MEDIA QUERIES
+
+\*------------------------------------*/
 /*---------------------------------------------------------------------------*\
-  
-  IMPORTANT: This website was built using Sass. Please look at main.scss
-  for styling documentation. 
+  #DOCUMENTATION
+
+  - This website uses a responsive layout, created desktop-first using a 
+    combination of Bootstrap 4, flexbox and grid. For screens 
+    larger than 1600px, the layout becomes fixed and centered in the page. 
+
+  - Both the main page and the profile page are built using a grid with one
+    row and two columns. For screens smaller than 900px, the first column 
+    with the image goes on top of the second one. 
+
+  - The project page again uses a grid with two columns; the first one goes
+    on top when viewed on screen smaller than 1000px. The first column 
+    contains a Bootstrap carousel with some images of the finished project, 
+    with a link that activates a gallery (built using Photoswipe) with 
+    additional images. 
+
+  - The contact page does not use grid; a single column contain the customized
+    bootstrap form.   
 
 \*---------------------------------------------------------------------------*/
 /*------------------------------------*\
@@ -309,7 +340,7 @@ footer img {
     text-align: left;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1036px) {
+@media screen and (min-width: 900px) and (max-width: 1036px) {
   .title {
     justify-content: center;
     align-content: flex-start;
@@ -331,6 +362,11 @@ footer img {
 
   .projects p {
     font-size: calc(0.8em + 1vw);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 900px) {
+  .title {
+    align-items: center;
   }
 }
 @media screen and (min-width: 769px) {
