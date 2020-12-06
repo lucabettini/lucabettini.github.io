@@ -146,13 +146,6 @@ h2 {
   justify-content: space-between;
   align-items: flex-end !important;
 }
-.navigation-bar .logo {
-  display: flex;
-  align-items: flex-end;
-}
-.navigation-bar .logo img {
-  max-height: 40px;
-}
 
 /*------------------------------------*\
   # FOOTER 
