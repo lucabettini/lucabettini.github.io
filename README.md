@@ -1,13 +1,14 @@
 # LUCABETTINI.GITHUB.IO
 
 This website was created as a project for [Start2Impact](https://www.start2impact.it/).<br>
-The requisites were:<br>
-- A biography 
-- An image of myself 
-- Images of my projects
-- Links to my projects
-- A contact form or another way to get in touch with me 
-<br>
+The requisites were:
+
+ - A biography
+ - An image of myself
+ - Images of my projects 
+ - Links to my    projects 
+ - A contact form or another way to get in touch with me
+
 **Note: for additional documentation on layout choices look at .styles/main.scss**<br>
 I opted for a simple static website with four pages, including a homepage, a profile page, a gallery of my projects and a contact page.<br>
 I used a [Bootstrap carousel](https://getbootstrap.com/docs/5.0/components/carousel/) in the Projects page, linked to a gallery made with the [PhotoSwipe](https://photoswipe.com/) library.<br>
